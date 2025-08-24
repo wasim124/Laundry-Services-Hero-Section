@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+  overflow: hidden; /* Prevent scroll */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(80, 77, 77);
+  padding: 20px 40px;
+  background-color: rgb(251, 250, 250);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+ 
+}
+
+.nav-links li a {
+  color: grey;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #2980B9;
+  background-color: #ceebff;
+   padding: 1.3vw 2.2vw;
+  border-radius: 10px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  height: calc(100vh - 80px); /* Full height minus navbar */
+  width: 100vw;
+  background-color: #ffff;
+}
+
+.hero-left, .hero-right {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:  30px ;
+}
+
+.hero-left {
+  flex-direction: column;
+  text-align: left;
+  padding: 0 40px;
+}
+
+.hero-left h1 {
+  font-size: 4vw;
+  margin-bottom: 1.5vh;
+  color: rgb(85, 84, 84);
+}
+span{
+  color: #3498DB;
+}
+
+.hero-left p {
+  font-size: 1.2vw;
+  margin-bottom: 2vh;
+  color: rgb(195, 189, 189);
+  line-height: 1.5;
+  
+}
+
+.cta-button {
+  margin-top: 2vh;
+  margin-right: 310px;
+  padding: 1.3vw 2.2vw;
+  font-size: 1vw;
+  background-color: #3498DB;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2980B9;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+  }
+
+  .hero-left, .hero-right {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 6vw;
+  }
+
+  .hero-left p {
+    font-size: 4vw;
+  }
+
+  .cta-button {
+    font-size: 4vw;
+    padding: 2vw 4vw;
+  }
+
+  body, html {
+    overflow: auto;
+  }
+}
